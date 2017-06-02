@@ -1,0 +1,41 @@
+<br><br><br>
+
+<div class="col-md-2" *ngIf="showSide">
+	<app-side-menu
+	[sideMenu]='sideMenu'
+	[showSideMenu]='showSideMenu'
+	(show)='show($event)'
+	(hideSide)='hideSide($event)'
+	></app-side-menu>
+</div>
+<div class="col-md-12 text-center" *ngIf="news">
+	<app-news-list
+	[news]='news'
+	(showBig)='showBig($event)'
+	(search)='search($event)'
+	(showSide)='showSide($event)'
+	[message]='message'></app-news-list>
+</div>
+
+
+
+<!-- News MODAL   data-toggle="modal" data-target=".bs-example-modal-lg"  -->
+	<div class="modal fade bs-example-modal-lg container-fluid col-md-8" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<app-modal
+		[selectedNews]='selectedNews'
+		(like)='like($event)'
+		(unlike)='unlike($event)'></app-modal>
+	</div> 
+	<div class="modal fade news-history container-fluid col-md-8" tabindex="-1" role="dialog" aria-labelledby="news-history" *ngIf="newsHistory">
+		<app-news-history
+			[newsHistory]='newsHistory'
+			(remove)='removeNewsFromHistory($event)'
+			(clear) ='clearAllNewsFromHistory($event)'></app-news-history>
+	</div> 
+	<div class="modal fade liked-news container-fluid col-md-8" tabindex="-1" role="dialog" aria-labelledby="liked-news">
+		<app-liked-news
+			[likedNews]='likedNews'
+			(remove)='unlike($event)'
+			(clear) ='clearAllNewsFromLikedNews($event)'
+		></app-liked-news>
+	</div> 

@@ -1,0 +1,22 @@
+.news{
+	margin-top: 2vh;
+}
+.demo-card-wide, .modal_news{
+	height: 530px;
+}
+.mdl-card__supporting-text{
+	height: 200px
+}
+.mdl-card__title{
+	margin-top: 35px
+}
+.mdl-list__item-primary-content{
+	font-size:1.4vh; 
+}
+.mdl-list__item-avatar{
+	font-size:4vh
+}
+
+.img-responsive{
+	max-height: 300px;
+}

@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.loader{
+  padding-top: 25%;
+  padding-left:20vw;
+}
+.inline{
+  display: inline;
+}
+.inline{
+  height: 50px;
+  width: 50px;
+  padding: 2%;
+  font-size: 32px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#566c73), to(#d3dee1));
+	background-image: -webkit-linear-gradient(top, #566c73 #d3dee1);
+	background-image: -moz-linear-gradient(top, #566c73, #d3dee1);
+	background-image: linear-gradient(to bottom, #566c73, #d3dee1);
+  color: snow;
+  margin-left: 1%;
+ }
+.empty{
+  background-image: none;
+}
+.loading{
+  margin-top:5%;
+  margin-left: 20vw;
+  font-size: 32px;
+  color: #566c73;
+  opacity: 0.9;
+  text-shadow: 1px 1px 1px #566c73;
+}
+.powered{
+  color: #566c73;
+  opacity: 0.9;
+  text-shadow: 1px 1px 1px #566c73;
+  font-size: 10px;
+}

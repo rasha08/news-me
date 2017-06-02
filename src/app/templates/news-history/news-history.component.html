@@ -1,0 +1,39 @@
+<div class="col-md-12 mdl-shadow--2dp newsHistory">
+	<div *ngIf="newsHistory.length > 0">	
+		<h3 class="jumbothrone">Your History</h3>
+		<ul *ngFor="let news of newsHistory">
+			<div class="col-md-12 mdl-shadow--2dp">
+				<div class="col-md-6">
+					<h5>{{news.title}}</h5>
+				</div>
+				<div class="col-md-2">
+					<small><b><span class="glyphicon glyphicon-globe"></span>{{news.source}}</b></small>
+				</div>
+				<div class="col-md-2">
+					<small><span class="glyphicon glyphicon-time"></span>{{news.timeOfRead}}</small>
+				</div>
+				<div class="col-md-1">
+					<a href="{{news.url}}" target="_blank"><button class="btn btn-default btn-block"><span class="glyphicon glyphicon-new-window"></span></button></a>
+				</div>
+				<div class="col-md-1">
+					<button class=" btn btn-danger btn-block" (click)="remove.emit(news)"><span class="glyphicon glyphicon-remove"></span></button>			
+				</div>
+			</div>
+		</ul>
+
+		<div class="col-md-offset-6 col-md-2">
+			<button type="button" class="btn btn-default btn-lg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close History</span></button>
+		</div>
+		<div class="col-md-2">
+			<button type="button" class="btn btn-warning btn-lg" (click)="clear.emit()"><span aria-hidden="true">Clear History</span></button>
+		</div>
+	</div>
+	<div *ngIf="newsHistory.length == 0">
+		<div class="alert alert-info">
+			<h3 class="jumothrone">Your History is Empty</h3>
+		</div>
+		<div class="col-md-offset-6 col-md-2">
+			<button type="button" class="btn btn-default btn-lg" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Close History</span></button>
+		</div>
+	</div>
+</div>

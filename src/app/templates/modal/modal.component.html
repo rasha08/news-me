@@ -1,0 +1,38 @@
+<div class="modal-dialog col-md-8 container-fluid" role="document" style="width:98%">
+			<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><h3><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></h3></button>
+      		</div>
+    		<div class="modal-content mdl-shadow--2dp text-center">
+				<div class="source col-md-12">
+					<div class="col-md-offset-3 col-md-6">
+						<h3><span class="glyphicon glyphicon-globe"> </span>{{selectedNews.source}}</h3>
+					</div>
+					<div class="col-md-1" *ngIf = "selectedNews.liked === true">
+						<h3 (click)="unlike.emit(selectedNews)"><span class="glyphicon glyphicon-star {{selectedNews.liked}}"></span></h3>
+					</div>
+					<div class="col-md-1" *ngIf = "selectedNews.liked === false">
+						<h3 (click)="like.emit(selectedNews)"><span class="glyphicon glyphicon-star-empty {{selectedNews.liked}}"></span></h3>
+					</div>
+				</div>
+			<div class="col-md-12 modal_news">
+				<div class="col-md-12">
+					<h3 class="jumbothrone">{{selectedNews.title}} </h3>
+					<hr>
+					<div class="col-md-7">
+						<p class="lead">{{selectedNews.description}}</p>
+					</div>
+					<div class="col-md-5">
+						<img src="{{selectedNews.urlToImage}}" alt="{{selectedNews.title}}" class="img-responsive img-thimbnail">
+					</div>
+					<hr>
+					<small>Published at: {{selectedNews.publishedAt}}</small>
+					<div class="mdl-card__actions mdl-card--border col-md-6">
+						<a class="btn btn-default btn-lg" href="{{selectedNews.url}}" target="_blank">
+							Go to {{selectedNews.source}}...
+						</a>
+					</div>
+				</div>
+			</div>
+		
+    		</div>
+  		</div>

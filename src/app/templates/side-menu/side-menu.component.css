@@ -1,0 +1,34 @@
+.mdl-list__item-primary-content{
+	font-size: calc(10px + 0.2vw);
+}
+.material-icons{
+	font-size: calc(15px + 2vw);
+	color: #52676E
+}
+.mdl-list{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F0F8FF), to(#edf2ee));
+	background-image: -webkit-linear-gradient(top, #F0F8FF, #edf2ee);
+	background-image: -moz-linear-gradient(top, #F0F8FF, #edf2ee);
+	background-image: linear-gradient(to bottom, #F0F8FF, #edf2ee);
+	width: 320px;
+	z-index: 999;
+}
+.btn-default{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ebeef2), to(#d3dee1));
+	background-image: -webkit-linear-gradient(top, #ebeef2,#d3dee1);
+	background-image: -moz-linear-gradient(top, #ebeef2, #d3dee1);
+	background-image: linear-gradient(to bottom, #ebeef2, #d3dee1);
+}
+.side{
+	margin-top: 50px;
+	margin-left: -350px;
+	-webkit-transition: margin-left 300ms ease-in 0s;
+	-moz-transition: margin-left 300ms ease-in 0s;
+	transition: margin-left 300ms ease-in 0s;
+	z-index: 999;
+	position: absolute;
+}
+.true .side{
+
+	margin-left:0px; 
+}

@@ -1,0 +1,38 @@
+.modal_news{
+	margin-top: 2vh;
+	background-color: whitesmoke;
+	vertical-align: middle;
+}
+.source{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F0F8FF), to(#d3dee1));
+	background-image: -webkit-linear-gradient(top, #F0F8FF,#d3dee1);
+	background-image: -moz-linear-gradient(top, #F0F8FF, #d3dee1);
+	background-image: linear-gradient(to bottom, #F0F8FF, #d3dee1);
+}
+.glyphicon-star{
+	cursor: pointer;
+	color: gold;
+	text-shadow: 1px 2px 2px goldenrod;
+}
+.glyphicon-star-empty{
+	cursor: pointer;
+	color: goldenrod;
+	text-shadow: 0px 0px 0px gold;
+	-webkit-transition: color 300ms ease-out 0ms;
+	-moz-transition: color 300ms ease-out 0ms;
+	transition: color 300ms ease-out 0ms;
+}
+.glyphicon-star-empty:hover{
+	color:  gold;
+
+}
+.modal_news{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#F0F8FF), to(#d3dee1));
+	background-image: -webkit-linear-gradient(top, #F0F8FF,#d3dee1);
+	background-image: -moz-linear-gradient(top, #F0F8FF, #d3dee1);
+	background-image: linear-gradient(to bottom, #F0F8FF, #d3dee1);
+}
+.close{
+	color: firebrick;
+	opacity: 1;
+}

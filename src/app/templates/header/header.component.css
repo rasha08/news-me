@@ -1,0 +1,15 @@
+.navbar{
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#566c73), to(#d3dee1));
+	background-image: -webkit-linear-gradient(top, #566c73 #d3dee1);
+	background-image: -moz-linear-gradient(top, #566c73, #d3dee1);
+	background-image: linear-gradient(to bottom, #566c73, #d3dee1);
+}
+.navbar-brand{
+	color: snow;
+}
+.navbar-nav li a{
+	color: snow;
+}
+li a{
+	cursor: pointer;
+}

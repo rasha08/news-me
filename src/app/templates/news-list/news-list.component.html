@@ -1,0 +1,46 @@
+<div class="col-md-12">
+
+	<div class="col-md-2">
+		<button class="btn btn-block btn-default" (click)="showSide.emit()">News Sources</button>
+		<br>
+	</div>
+	<div class="col-md-offset-1 col-md-6">
+		<input type="text" class="form-control" placeholder="search all news..." (keyup)="search.emit($event)">
+		<br>
+	</div>
+	<div class="col-md-12">
+		<hr>
+	</div>
+	<div *ngIf="news.length==0" class="col-md-offset-2 col-md-8">
+		<h3 class="alert-info jumbothrone text-center">{{message}}</h3>
+	</div>
+	<div *ngFor="let news of news" class="news">
+				<div class="demo-card-wide mdl-card mdl-shadow--2dp {{news.liked}}">
+					<div class="mdl-card__actions mdl-card--border readed" *ngIf="news.isRead == true && news.liked == false">
+						<span class="badge col-md-5">{{news.source}}</span>
+						<span class="col-md-offset-5 col-md-1 glyphicon glyphicon-eye-open"></span>
+					</div>
+					<div class="mdl-card__actions mdl-card--border readed" *ngIf="news.isRead == true && news.liked == true">
+						<span class="badge col-md-5">{{news.source}}</span>
+						<span class="col-md-offset-5 col-md-1 glyphicon glyphicon-star {{news.liked}}-badge"></span>
+					</div>
+					<div class="mdl-card__actions mdl-card--border" *ngIf="news.isRead == false">
+						<span class="badge col-md-5">{{news.source}}</span>
+					</div>
+					<div class="mdl-card__title">
+						<h2 class="mdl-card__title-text">{{news.title.slice(0,75)}}...</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<img src="{{news.urlToImage}}" alt="{{news.title}}" class="img-responsive img img-thumbnail">
+					</div>
+					<div class="mdl-card__supporting-text">
+						<p>{{news.description.slice(0,200)}}...</p>
+					</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"  data-toggle="modal" data-target=".bs-example-modal-lg" (click)="showBig.emit(news)">
+						More...
+						</a>
+					</div>
+				</div>
+			</div>
+	</div>
